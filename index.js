@@ -79,11 +79,11 @@ app.post("/update", (req, res) => {
     });
 });
 
-mongoose.connect(MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-
-});
+// const options = {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// }
+mongoose.connect(MONGODB_URI);
 
 mongoose.connection.on("connected", () => {
   console.log("mongodb is connected =P");
