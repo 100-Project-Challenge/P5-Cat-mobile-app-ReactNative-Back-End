@@ -45,7 +45,7 @@ app.post("/create", (req, res) => {
 });
 
 app.post("/delete", (req, res) => {
-  cat.findByIdAndRemove(req.body.id)
+  Cat.findByIdAndRemove(req.body.id)
     .then((data) => {
       console.log("deleted", data);
       res.send(data);
@@ -59,7 +59,7 @@ app.post("/update", (req, res) => {
   const { id, name, breed, description, img, age } = req.body;
 
   console.log("request", req.body);
-  cat.findByIdAndUpdate(
+  Cat.findByIdAndUpdate(
     id,
     {
       name,
