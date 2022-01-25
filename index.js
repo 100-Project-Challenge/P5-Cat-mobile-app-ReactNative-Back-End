@@ -1,12 +1,12 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const bodyParser = require('body-parser')
+// const bodyParser = require('body-parser')
 const Cat = require("./modal");
 require("dotenv").config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
 const PORT = process.env.PORT;
 const MONGODB_URI = process.env.MONGODB_URI;
